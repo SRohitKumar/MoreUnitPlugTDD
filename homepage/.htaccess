@@ -1,0 +1,31 @@
+Redirect permanent /docu.html http://moreunit.sourceforge.net/#doc
+Redirect permanent /docu_creation.html http://moreunit.sourceforge.net/#doc-testcreation
+Redirect permanent /docu_extension.html http://moreunit.sourceforge.net/#doc-extensionpoint
+Redirect permanent /docu_getting_started.html http://moreunit.sourceforge.net/#doc-gettingstarted
+Redirect permanent /docu_label.html http://moreunit.sourceforge.net/#doc-labeldecoration
+Redirect permanent /docu_marker.html http://moreunit.sourceforge.net/#doc-editormarker
+Redirect permanent /docu_prefs.html http://moreunit.sourceforge.net/#doc-workspacepreferences
+Redirect permanent /docu_prop.html http://moreunit.sourceforge.net/#doc-projectproperties
+Redirect permanent /docu_refactoring.html http://moreunit.sourceforge.net/#doc-refactoringsupport
+Redirect permanent /docu_runningtest.html http://moreunit.sourceforge.net/#doc-testlaunching
+Redirect permanent /docu_switching.html http://moreunit.sourceforge.net/#doc-classtestswitching
+Redirect permanent /docu_view.html http://moreunit.sourceforge.net/#doc-missingtestmethodsview
+Redirect permanent /download.html http://moreunit.sourceforge.net/#download
+Redirect permanent /faq.html http://moreunit.sourceforge.net/#faq
+Redirect permanent /kontakt.html http://moreunit.sourceforge.net/#about
+Redirect permanent /releases.html http://moreunit.sourceforge.net/#releasenotes
+
+Header unset Pragma
+FileETag None
+Header unset ETag
+ 
+# cache images/pdf docs for 10 days
+<FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif)$">
+  Header set Cache-Control "max-age=864000, public, must-revalidate"
+  Header unset Last-Modified
+</FilesMatch>
+ 
+# cache html/htm/xml/txt files for 1 day
+<FilesMatch "\.(html|htm|xml|txt|xsl)$">
+  Header set Cache-Control "max-age=3600, must-revalidate"
+</FilesMatch>
