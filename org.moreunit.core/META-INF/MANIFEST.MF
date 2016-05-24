@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: MoreUnit Plug-in Core
 Bundle-SymbolicName: org.moreunit.core;singleton:=true
-Bundle-Version: 3.1.1.qualifier
+Bundle-Version: 1.0
 Bundle-Activator: org.moreunit.core.MoreUnitCore
 Bundle-Vendor: MoreUnit.org
 Require-Bundle: org.eclipse.core.expressions,
@@ -13,7 +13,7 @@ Require-Bundle: org.eclipse.core.expressions,
  org.eclipse.ui.ide,
  org.eclipse.ui.forms,
  org.eclipse.ui.editors
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.moreunit.core;x-friends:="org.moreunit.core.test,o
  rg.moreunit.mock",org.moreunit.core.commands;x-friends:="org.moreunit
